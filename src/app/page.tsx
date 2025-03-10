@@ -1,6 +1,7 @@
 "use client";
-
 import { useState, useEffect } from "react";
+import { EnterIcon } from "@radix-ui/react-icons";
+
 import SpotifyWidget from "./components/SpotifyWidget";
 
 export default function Home() {
@@ -30,12 +31,17 @@ export default function Home() {
   };
 
   return (
-    <div className="text-center">
-      <h1>Spotify Now Playing</h1>
+    <div className="flex flex-col items-center justify-center h-screen bg-transparent w-dvw py-6 px-6">
       {isAuthenticated ? (
         <SpotifyWidget />
       ) : (
-        <button onClick={handleLogin}>Login with Spotify</button>
+        <button
+          className="bg-green-500 text-white px-6 py-2 rounded-md flex items-center justify-center grow-0 cursor-pointer gap-2"
+          onClick={handleLogin}
+        >
+          <EnterIcon className="w-4 h-4" />
+          Login with Spotify
+        </button>
       )}
     </div>
   );

@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "node server --turbopack",
     "build": "next build",
-    "start": "next start",
+    "start": "node server",
     "lint": "next lint"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",
+    "@radix-ui/react-progress": "^1.1.2",
     "@radix-ui/react-toast": "^1.2.6",
     "@tailwindcss/postcss": "^4.0.12",
     "autoprefixer": "^10.4.20",
